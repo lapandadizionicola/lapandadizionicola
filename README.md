@@ -9,7 +9,7 @@ lapanda-site/
 ├── index.html          ← Home + profilo TikTok integrato
 ├── bio.html            ← Storia e bio
 ├── modifiche.html      ← Pezzi e modifiche
-├── contatti.html       ← Contatti + form + FAQ
+├── contatti.html       ← Contatti + Microsoft Forms + FAQ
 ├── css/
 │   └── style.css       ← Tutto lo stile (separato)
 ├── img/                ← Metti qui foto e logo
@@ -28,9 +28,13 @@ python3 -m http.server 8000
 
 ## Video TikTok
 
-La home incorpora il profilo creator ufficiale `@lapandadizionicola`: non servono gli ID dei singoli video e i contenuti sono gestiti direttamente da TikTok. Se TikTok non carica l’embed, il pulsante **Segui @lapandadizionicola** apre comunque il profilo.
+La home carica il profilo creator ufficiale `@lapandadizionicola` solo quando si preme **Carica i video**, così TikTok non rallenta la pagina a ogni visita. Il pulsante per aprire direttamente il profilo resta disponibile anche senza caricare l'embed.
 
-Per cambiare profilo, aggiorna in `index.html` l’URL del `blockquote` (`cite`), l’attributo `data-unique-id` e i link al profilo. Mantieni lo script `https://www.tiktok.com/embed.js` una sola volta nella pagina.
+Per cambiare profilo, aggiorna in `index.html` l'URL del `blockquote` (`cite`), l'attributo `data-unique-id` e i link al profilo.
+
+## Messaggi e foglio Excel
+
+Una pagina statica non può scrivere in un file Excel senza un servizio collegato. La soluzione scelta è incorporare un Microsoft Forms pubblico con i campi Nome, Email e Messaggio. In Forms crea il modulo, apri **Raccogli risposte → Incorpora** e copia l'URL del modulo per inserirlo in `contatti.html`. Dalla scheda **Risposte → Apri risultati in Excel** puoi consultare il workbook collegato su OneDrive e le nuove risposte. Non inserire password, token o link privati di Power Automate nel codice pubblico.
 
 ## Come aggiungere una modifica
 
@@ -45,7 +49,7 @@ In `modifiche.html` duplica un blocco `<article class="mod-card">…</article>`,
 
 - **Colori**: modifica le variabili CSS in cima a `css/style.css` (`--accent`, `--black`, ecc.)
 - **Testo bio**: modifica liberamente i paragrafi in `bio.html`
-- **Form contatti**: per farlo funzionare davvero collega Formspree, Netlify Forms o un backend
+- **Modulo Excel**: crea un Microsoft Form con Nome, Email e Messaggio, attiva il workbook da **Risposte → Apri risultati in Excel** e inserisci sul sito il link di condivisione/incorporamento del modulo.
 
 ## Note
 

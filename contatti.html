@@ -5,9 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contatti &amp; Community | La Panda di Zio Nicola</title>
   <meta name="description" content="Contatti e community della Panda di Zio Nicola. Seguici su TikTok e scrivici.">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -15,7 +12,7 @@
   <header class="site-header">
     <div class="header-inner">
       <a href="index.html" class="logo">
-        <span class="logo-icon"><img src="TuleS.jpg" alt=""></span>
+        <span class="logo-icon"><img src="TuleS-ottimizzata.jpg" alt=""></span>
         La Panda di <span>Zio Nicola</span>
       </a>
       <button class="menu-toggle" aria-label="Apri menu" onclick="document.querySelector('.nav').classList.toggle('open')">☰</button>
@@ -36,7 +33,7 @@
           <h1>La community<br><span>sei anche tu.</span></h1>
           <p>Una domanda, un consiglio o un saluto: ci fa piacere conoscere chi condivide la passione per la Panda.</p>
         </div>
-        <img src="TuleS.jpg" alt="La Panda 4x4 di Zio Nicola">
+        <img src="TuleS-ottimizzata.jpg" alt="La Panda 4x4 di Zio Nicola" fetchpriority="high">
       </div>
     </section>
 
@@ -69,7 +66,7 @@
           <div class="faq-list">
             <div class="faq-item">
               <strong>Posso chiederti consiglio su un pezzo?</strong>
-              <p>Certo. Scrivimi su TikTok o usa il form qui a fianco. Rispondo quando posso.</p>
+              <p>Certo. Scrivimi su TikTok e rispondo quando posso.</p>
             </div>
             <div class="faq-item">
               <strong>Fai collaborazioni o sponsor?</strong>
@@ -84,25 +81,18 @@
 
         <!-- Form -->
         <div class="contact-card">
-          <h2>✉️ Scrivimi</h2>
+          <h2>✉️ Messaggi in Excel</h2>
           <p class="form-note">
-            Il form è solo frontend (non invia email da solo). Puoi collegarlo a un servizio come Formspree, Netlify Forms o al tuo backend.
+            Il vecchio modulo non inviava davvero i messaggi. Per salvare le risposte automaticamente nel tuo Excel online, colleghiamo qui un modulo Microsoft Forms.
           </p>
-          <form action="#" method="POST" onsubmit="alert('Form di esempio: collega un servizio di invio email per farlo funzionare davvero.'); return false;">
-            <div class="form-group">
-              <label for="nome">Nome</label>
-              <input type="text" id="nome" name="nome" placeholder="Il tuo nome" required>
+          <div class="excel-form-pending">
+            <span aria-hidden="true">↗</span>
+            <div>
+              <strong>Modulo in collegamento</strong>
+              <p>Crea il modulo con Nome, Email e Messaggio. Poi in Microsoft Forms scegli “Raccogli risposte” e “Incorpora” e mandami il link del modulo: lo inserirò qui. Le risposte saranno consultabili nel foglio Excel su OneDrive.</p>
             </div>
-            <div class="form-group">
-              <label for="email">Email</label>
-              <input type="email" id="email" name="email" placeholder="tua@email.com" required>
-            </div>
-            <div class="form-group">
-              <label for="messaggio">Messaggio</label>
-              <textarea id="messaggio" name="messaggio" placeholder="Ciao Zio Nicola, volevo chiederti..." required></textarea>
-            </div>
-            <button type="submit" class="btn btn-primary">Invia messaggio</button>
-          </form>
+          </div>
+          <a class="btn btn-primary" href="https://www.tiktok.com/@lapandadizionicola" target="_blank" rel="noopener">Scrivici intanto su TikTok</a>
         </div>
 
       </div>
