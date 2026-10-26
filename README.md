@@ -1,55 +1,55 @@
-# Panda di Zio Nicola – Sito Web
+# La Panda di Zio Nicola – Sito web
 
-Sito ufficiale della **Panda di Zio Nicola** (Fiat Panda 4x4 old style).
-
-## Come pubblicarlo su GitHub Pages (gratis)
-
-1. Crea un account su [GitHub](https://github.com) se non ce l’hai
-2. Crea un nuovo repository (es. `panda-zio-nicola`)
-3. Carica **tutti** i file di questa cartella nel repository (puoi trascinare la cartella o usare GitHub Desktop)
-4. Vai su **Settings → Pages**
-5. In "Source" seleziona `main` (o `master`) e cartella `/ (root)`
-6. Salva. Dopo 1-2 minuti il sito sarà online su:
-   `https://TUO-USERNAME.github.io/panda-zio-nicola/`
-
-### Alternative gratis altrettanto valide
-- **Netlify**: trascina la cartella su netlify.com → Deploy
-- **Cloudflare Pages**: collega il repo GitHub
-- **Vercel**: stesso sistema
+Sito multi-pagina per la pagina TikTok **@lapandadizionicola**.
 
 ## Struttura
 
 ```
-panda-zio-nicola/
-├── index.html
+lapanda-site/
+├── index.html          ← Home + profilo TikTok integrato
+├── bio.html            ← Storia e bio
+├── modifiche.html      ← Pezzi e modifiche
+├── contatti.html       ← Contatti + form + FAQ
 ├── css/
-│   └── style.css
-├── js/
-│   └── script.js
-├── assets/
-│   └── favicon.svg
+│   └── style.css       ← Tutto lo stile (separato)
+├── img/                ← Metti qui foto e logo
 └── README.md
 ```
 
-## Come guadagnare con i link Amazon
+## Come visualizzarlo
 
-1. Iscriviti a [Amazon Associates Italia](https://affiliate-program.amazon.it)
-2. Dopo l’approvazione ottieni il tuo **tag** (es. `zionicola-21`)
-3. Per ogni prodotto nella sezione Shop sostituisci il link `#` con:
-   `https://www.amazon.it/dp/CODICE-PRODOTTO?tag=TUO-TAG`
-4. Quando qualcuno compra attraverso i tuoi link, guadagni una commissione
+Apri semplicemente `index.html` con il browser (doppio click) oppure usa un server locale:
 
-## Personalizzazioni consigliate
+```bash
+# Dalla cartella del sito
+python3 -m http.server 8000
+# poi vai su http://localhost:8000
+```
 
-- Sostituisci `tuoemail@example.com` con la tua email vera
-- Aggiungi il link Instagram quando lo avrai
-- Mandami i link Amazon reali dei prodotti e li aggiorno
-- Collega il form a Formspree o EmailJS per ricevere davvero i messaggi
+## Video TikTok
 
-## Tecnologie
+La home incorpora il profilo creator ufficiale `@lapandadizionicola`: non servono gli ID dei singoli video e i contenuti sono gestiti direttamente da TikTok. Se TikTok non carica l’embed, il pulsante **Segui @lapandadizionicola** apre comunque il profilo.
 
-- HTML5 + CSS3 puro
-- JavaScript vanilla
-- AOS (Animate On Scroll)
-- Google Fonts (Inter + Outfit)
-- Completamente responsive e hostabile gratis
+Per cambiare profilo, aggiorna in `index.html` l’URL del `blockquote` (`cite`), l’attributo `data-unique-id` e i link al profilo. Mantieni lo script `https://www.tiktok.com/embed.js` una sola volta nella pagina.
+
+## Come aggiungere una modifica
+
+In `modifiche.html` duplica un blocco `<article class="mod-card">…</article>`, cambia:
+
+- emoji (o metti una foto vera in `img/`)
+- titolo
+- descrizione
+- tag (`estetica`, `performance`, `offroad`, `comfort`)
+
+## Personalizzazioni rapide
+
+- **Colori**: modifica le variabili CSS in cima a `css/style.css` (`--accent`, `--black`, ecc.)
+- **Testo bio**: modifica liberamente i paragrafi in `bio.html`
+- **Form contatti**: per farlo funzionare davvero collega Formspree, Netlify Forms o un backend
+
+## Note
+
+- Design responsive (mobile-first)
+- HTML e CSS completamente separati
+- Nessun framework esterno obbligatorio
+- Menu hamburger automatico su schermi piccoli

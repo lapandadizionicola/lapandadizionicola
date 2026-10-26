@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contatti &amp; Community | La Panda di Zio Nicola</title>
+  <meta name="description" content="Contatti e community della Panda di Zio Nicola. Seguici su TikTok e scrivici.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="index.html" class="logo">
+        <span class="logo-icon"><img src="TuleS.jpg" alt=""></span>
+        La Panda di <span>Zio Nicola</span>
+      </a>
+      <button class="menu-toggle" aria-label="Apri menu" onclick="document.querySelector('.nav').classList.toggle('open')">☰</button>
+      <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="bio.html">Bio</a>
+        <a href="modifiche.html">Modifiche</a>
+        <a href="contatti.html" class="active">Contatti</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <div class="page-hero-inner">
+        <div>
+          <p class="hero-eyebrow"><span></span> CI VEDIAMO SULLA STRADA</p>
+          <h1>La community<br><span>sei anche tu.</span></h1>
+          <p>Una domanda, un consiglio o un saluto: ci fa piacere conoscere chi condivide la passione per la Panda.</p>
+        </div>
+        <img src="TuleS.jpg" alt="La Panda 4x4 di Zio Nicola">
+      </div>
+    </section>
+
+    <section class="container">
+      <div class="contact-grid">
+
+        <!-- Social -->
+        <div class="contact-card">
+          <h2>📱 Canali ufficiali</h2>
+          <div class="social-links">
+            <a href="https://www.tiktok.com/@lapandadizionicola" target="_blank" rel="noopener" class="social-link">
+              <span class="icon">🎵</span>
+              <div>
+                <strong>TikTok</strong><br>
+                <span class="social-handle">@lapandadizionicola</span>
+              </div>
+            </a>
+            <!-- Aggiungi altri social se li hai, es:
+            <a href="#" class="social-link">
+              <span class="icon">📸</span>
+              <div>
+                <strong>Instagram</strong><br>
+                <span style="font-size:0.85rem;color:var(--gray-500);">@tuo_account</span>
+              </div>
+            </a>
+            -->
+          </div>
+
+          <h2 class="faq-heading">❓ Domande frequenti</h2>
+          <div class="faq-list">
+            <div class="faq-item">
+              <strong>Posso chiederti consiglio su un pezzo?</strong>
+              <p>Certo. Scrivimi su TikTok o usa il form qui a fianco. Rispondo quando posso.</p>
+            </div>
+            <div class="faq-item">
+              <strong>Fai collaborazioni o sponsor?</strong>
+              <p>Dipende dal pezzo e dalla coerenza con lo stile della pagina. Scrivimi e ne parliamo.</p>
+            </div>
+            <div class="faq-item">
+              <strong>La Panda è in vendita?</strong>
+              <p>Per ora no: è un progetto in continua evoluzione. 😄</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Form -->
+        <div class="contact-card">
+          <h2>✉️ Scrivimi</h2>
+          <p class="form-note">
+            Il form è solo frontend (non invia email da solo). Puoi collegarlo a un servizio come Formspree, Netlify Forms o al tuo backend.
+          </p>
+          <form action="#" method="POST" onsubmit="alert('Form di esempio: collega un servizio di invio email per farlo funzionare davvero.'); return false;">
+            <div class="form-group">
+              <label for="nome">Nome</label>
+              <input type="text" id="nome" name="nome" placeholder="Il tuo nome" required>
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" placeholder="tua@email.com" required>
+            </div>
+            <div class="form-group">
+              <label for="messaggio">Messaggio</label>
+              <textarea id="messaggio" name="messaggio" placeholder="Ciao Zio Nicola, volevo chiederti..." required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Invia messaggio</button>
+          </form>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div>
+        <div class="footer-brand">🐼 La Panda di <span>Zio Nicola</span></div>
+        <p class="footer-desc">Panda 4x4 old style, rigorosamente 4x4. Avventure, modifiche e tanta passione.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Pagine</h4>
+        <a href="index.html">Home</a>
+        <a href="bio.html">Bio &amp; Storia</a>
+        <a href="modifiche.html">Modifiche</a>
+        <a href="contatti.html">Contatti</a>
+      </div>
+      <div class="footer-col">
+        <h4>Social</h4>
+        <a href="https://www.tiktok.com/@lapandadizionicola" target="_blank" rel="noopener">TikTok @lapandadizionicola</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 La Panda di Zio Nicola</span>
+      <span>Fatto con passione, rigorosamente 4x4.</span>
+    </div>
+  </footer>
+
+</body>
+</html>
