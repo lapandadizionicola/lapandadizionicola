@@ -9,7 +9,7 @@ lapanda-site/
 ├── index.html          ← Home + profilo TikTok integrato
 ├── bio.html            ← Storia e bio
 ├── modifiche.html      ← Pezzi e modifiche
-├── galleria.html       ← Galleria fotografica con carosello
+├── galleria.html       ← Gallery fotografica con carosello
 ├── contatti.html       ← Contatti + Microsoft Forms + FAQ
 ├── css/
 │   └── style.css       ← Tutto lo stile (separato)
@@ -46,9 +46,9 @@ In `modifiche.html` duplica un blocco `<article class="mod-card">…</article>`,
 - descrizione
 - tag (`estetica`, `performance`, `offroad`, `comfort`)
 
-## Come aggiungere foto alla galleria
+## Come aggiungere foto alla Gallery
 
-Metti le nuove foto nella cartella principale e aggiungi un blocco `<figure class="gallery-slide">` in `galleria.html`, aggiornando i pulsanti `.gallery-dot` nello stesso ordine. Il carosello gestisce automaticamente la navigazione da frecce, pallini e swipe su mobile.
+Metti le nuove foto nella cartella `imm` e aggiungi un blocco `<figure class="gallery-slide">` in `galleria.html`, aggiornando i pulsanti `.gallery-dot` nello stesso ordine. Il carosello gestisce automaticamente la navigazione da frecce, pallini e swipe su mobile.
 
 ## Personalizzazioni rapide
 

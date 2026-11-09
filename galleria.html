@@ -1,13 +1,25 @@
-c<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="it">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Galleria | La Panda di Zio Nicola</title>
-  <meta name="description" content="La Panda 4x4 di Zio Nicola in foto: scopri la galleria e le sue diverse inquadrature.">
+  <title>Gallery | La Panda di Zio Nicola</title>
+  <meta name="description" content="Foto e video della Panda 4x4 di Zio Nicola: scopri la Gallery e le sue avventure.">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <noscript><style>.site-loader { display: none !important; } body.is-loading { overflow: auto !important; }</style></noscript>
 </head>
-<body>
+<body class="is-loading">
+
+  <div class="site-loader" id="site-loader" role="status" aria-live="polite">
+    <div class="loader-content">
+      <div class="loader-photo-wrap" aria-hidden="true"><img class="loader-photo" src="TuleS-ottimizzata.jpg" alt=""></div>
+      <p class="loader-kicker">LA PANDA DI ZIO NICOLA</p>
+      <h2>La Panda è in partenza.</h2>
+      <p class="loader-caption" aria-live="off">La prossima avventura comincia qui.</p>
+      <div class="loader-track" aria-hidden="true"><span></span></div>
+    </div>
+  </div>
 
   <header class="site-header">
     <div class="header-inner">
@@ -20,7 +32,7 @@ c<!DOCTYPE html>
         <a href="index.html">Home</a>
         <a href="bio.html">Bio</a>
         <a href="modifiche.html">Modifiche</a>
-        <a href="galleria.html" class="active" aria-current="page">Galleria</a>
+        <a href="galleria.html" class="active" aria-current="page">Gallery</a>
         <a href="contatti.html">Contatti</a>
       </nav>
     </div>
@@ -31,8 +43,8 @@ c<!DOCTYPE html>
       <div class="page-hero-inner">
         <div>
           <p class="hero-eyebrow"><span></span> PICCOLA, MA CON TANTO CARATTERE</p>
-          <h1>La Panda<br><span>in foto.</span></h1>
-          <p>Un primo sguardo alla nostra 4x4. Scorri la galleria e goditi ogni dettaglio.</p>
+          <h1>La Panda<br><span>in foto e video.</span></h1>
+          <p>Scopri la nostra 4x4 attraverso le foto e i video della Gallery.</p>
         </div>
         <img src="TuleS-ottimizzata.jpg" alt="La Panda 4x4 verde di Zio Nicola" fetchpriority="high">
       </div>
@@ -42,37 +54,67 @@ c<!DOCTYPE html>
       <div class="gallery-heading">
         <div>
           <p class="section-eyebrow">LA NOSTRA 4X4</p>
-          <h2 class="section-title" id="gallery-title">Un’icona, da ogni angolazione.</h2>
-          <p class="section-subtitle">Usa le frecce o i pallini per cambiare inquadratura.</p>
+          <h2 class="section-title" id="gallery-title">La nostra Panda, in ogni dettaglio.</h2>
+          <p class="section-subtitle">Usa le frecce o i pallini per scorrere foto e video.</p>
         </div>
-        <span class="gallery-count" id="gallery-count" aria-live="polite">1 / 3</span>
+        <span class="gallery-count" id="gallery-count" aria-live="polite">1 / 9</span>
       </div>
 
-      <div class="gallery-carousel" tabindex="0" aria-roledescription="carosello" aria-label="Galleria fotografica della Panda">
+      <div class="gallery-carousel" tabindex="0" aria-roledescription="carosello" aria-label="Foto e video della Panda">
         <div class="gallery-slides">
           <figure class="gallery-slide is-active" aria-hidden="false">
-            <img src="TuleS-ottimizzata.jpg" alt="La Panda 4x4 verde vista per intero" fetchpriority="high">
-            <figcaption><span>01</span> La Panda di Zio Nicola</figcaption>
+            <img src="imm/file_00000000b4408246b9be96c05bbab337.png" alt="La Panda 4x4 verde vista di tre quarti" fetchpriority="high">
+            <figcaption><span>01</span> Pronta per nuove avventure</figcaption>
           </figure>
           <figure class="gallery-slide" aria-hidden="true">
-            <img class="gallery-image-detail" src="TuleS-ottimizzata.jpg" alt="Dettaglio della Panda 4x4 verde">
-            <figcaption><span>02</span> Un po’ più da vicino</figcaption>
+            <img src="imm/file_00000000fad482469aeee50508c68d97%20-%20Copia.jpg" alt="La Panda 4x4 verde vista di lato">
+            <figcaption><span>02</span> La linea classica della 4x4</figcaption>
           </figure>
           <figure class="gallery-slide" aria-hidden="true">
-            <img class="gallery-image-front" src="TuleS-ottimizzata.jpg" alt="Dettaglio del frontale della Panda 4x4">
-            <figcaption><span>03</span> Pronta a fare strada</figcaption>
+            <img src="imm/image-1789921539059%20-%20Copia.jpg" alt="Gli interni della Panda 4x4">
+            <figcaption><span>03</span> Dentro la Panda</figcaption>
+          </figure>
+          <figure class="gallery-slide gallery-slide--video" aria-hidden="true">
+            <video src="imm/Filmato%20personale%201_1.mp4" controls playsinline preload="metadata" poster="imm/file_00000000b4408246b9be96c05bbab337.png" aria-label="Video personale della Panda"></video>
+            <figcaption><span>04</span> Un video della Panda</figcaption>
+          </figure>
+          <figure class="gallery-slide gallery-slide--video" aria-hidden="true">
+            <video src="imm/20260920_185512.mp4" controls playsinline preload="metadata" poster="imm/file_00000000b4408246b9be96c05bbab337.png" aria-label="Video della Panda del 20 settembre"></video>
+            <figcaption><span>05</span> 20 settembre · video 1</figcaption>
+          </figure>
+          <figure class="gallery-slide gallery-slide--video" aria-hidden="true">
+            <video src="imm/20260920_184748.mp4" controls playsinline preload="metadata" poster="imm/file_00000000b4408246b9be96c05bbab337.png" aria-label="Video della Panda del 20 settembre"></video>
+            <figcaption><span>06</span> 20 settembre · video 2</figcaption>
+          </figure>
+          <figure class="gallery-slide gallery-slide--video" aria-hidden="true">
+            <video src="imm/20260913_104355.mp4" controls playsinline preload="metadata" poster="imm/file_00000000b4408246b9be96c05bbab337.png" aria-label="Video della Panda del 13 settembre"></video>
+            <figcaption><span>07</span> 13 settembre · video 1</figcaption>
+          </figure>
+          <figure class="gallery-slide gallery-slide--video" aria-hidden="true">
+            <video src="imm/20260913_101914.mp4" controls playsinline preload="metadata" poster="imm/file_00000000b4408246b9be96c05bbab337.png" aria-label="Video della Panda del 13 settembre"></video>
+            <figcaption><span>08</span> 13 settembre · video 2</figcaption>
+          </figure>
+          <figure class="gallery-slide gallery-slide--video" aria-hidden="true">
+            <video src="imm/20260913_093643.mp4" controls playsinline preload="metadata" poster="imm/file_00000000b4408246b9be96c05bbab337.png" aria-label="Video della Panda del 13 settembre"></video>
+            <figcaption><span>09</span> 13 settembre · video 3</figcaption>
           </figure>
         </div>
-        <button class="gallery-arrow gallery-previous" type="button" aria-label="Mostra la foto precedente">‹</button>
-        <button class="gallery-arrow gallery-next" type="button" aria-label="Mostra la foto successiva">›</button>
+        <button class="gallery-arrow gallery-previous" type="button" aria-label="Mostra il contenuto precedente">‹</button>
+        <button class="gallery-arrow gallery-next" type="button" aria-label="Mostra il contenuto successivo">›</button>
       </div>
 
-      <div class="gallery-controls" role="group" aria-label="Seleziona un’inquadratura">
-        <button class="gallery-dot is-active" type="button" aria-label="Mostra inquadratura 1" aria-current="true"></button>
-        <button class="gallery-dot" type="button" aria-label="Mostra inquadratura 2"></button>
-        <button class="gallery-dot" type="button" aria-label="Mostra inquadratura 3"></button>
+      <div class="gallery-controls" role="group" aria-label="Seleziona un contenuto">
+        <button class="gallery-dot is-active" type="button" aria-label="Mostra contenuto 1" aria-current="true"></button>
+        <button class="gallery-dot" type="button" aria-label="Mostra contenuto 2"></button>
+        <button class="gallery-dot" type="button" aria-label="Mostra contenuto 3"></button>
+        <button class="gallery-dot" type="button" aria-label="Mostra contenuto 4"></button>
+        <button class="gallery-dot" type="button" aria-label="Mostra contenuto 5"></button>
+        <button class="gallery-dot" type="button" aria-label="Mostra contenuto 6"></button>
+        <button class="gallery-dot" type="button" aria-label="Mostra contenuto 7"></button>
+        <button class="gallery-dot" type="button" aria-label="Mostra contenuto 8"></button>
+        <button class="gallery-dot" type="button" aria-label="Mostra contenuto 9"></button>
       </div>
-      <p class="gallery-note">Per ora la galleria parte dalla foto disponibile sul sito. Quando vuoi, aggiungiamo le tue foto delle uscite e dei lavori fatti alla Panda.</p>
+      <p class="gallery-note">Foto senza persone e video della Panda: usa i controlli del player per avviare e mettere in pausa i filmati.</p>
     </section>
   </main>
 
@@ -87,7 +129,7 @@ c<!DOCTYPE html>
         <a href="index.html">Home</a>
         <a href="bio.html">Bio &amp; Storia</a>
         <a href="modifiche.html">Modifiche</a>
-        <a href="galleria.html">Galleria</a>
+        <a href="galleria.html">Gallery</a>
         <a href="contatti.html">Contatti</a>
       </div>
       <div class="footer-col">
@@ -113,6 +155,10 @@ c<!DOCTYPE html>
         currentIndex = (index + slides.length) % slides.length;
         slides.forEach(function (slide, slideIndex) {
           var isActive = slideIndex === currentIndex;
+          var video = slide.querySelector('video');
+          if (!isActive && video) {
+            video.pause();
+          }
           slide.classList.toggle('is-active', isActive);
           slide.setAttribute('aria-hidden', String(!isActive));
           dots[slideIndex].classList.toggle('is-active', isActive);
@@ -158,5 +204,6 @@ c<!DOCTYPE html>
     }());
   </script>
 
+  <script src="js/site.js"></script>
 </body>
 </html>
