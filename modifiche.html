@@ -7,6 +7,18 @@
   <meta name="description" content="Le modifiche reali della Panda di Zio Nicola: verniciatura fai da te, fari LED supplementari e kit di retroilluminazione con gruppo simboli.">
   <link rel="stylesheet" href="css/style.css">
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <script>
+    try {
+      var pageVisitCount = Number(localStorage.getItem('panda-page-visit-count')) || 0;
+      pageVisitCount += 1;
+      localStorage.setItem('panda-page-visit-count', String(pageVisitCount));
+      if (pageVisitCount % 3 !== 0) {
+        document.documentElement.classList.add('intro-seen');
+      }
+    } catch (error) {
+      document.documentElement.classList.add('intro-seen');
+    }
+  </script>
   <noscript><style>.site-loader { display: none !important; } body.is-loading { overflow: auto !important; }</style></noscript>
 </head>
 <body class="is-loading">

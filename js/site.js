@@ -4,36 +4,41 @@
   const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
   if (loader) {
-    const loaderCaption = loader.querySelector('.loader-caption');
-    const loaderMessages = [
-      'La prossima avventura comincia qui.',
-      'Rigorosamente 4×4. Sempre.',
-      'Ogni strada ha la sua storia.'
-    ];
-    let loaderMessageIndex = 0;
-    const messageTimer = loaderCaption && !reduceMotion ? window.setInterval(() => {
-      loaderCaption.classList.add('is-changing');
-      window.setTimeout(() => {
-        loaderMessageIndex = (loaderMessageIndex + 1) % loaderMessages.length;
-        loaderCaption.textContent = loaderMessages[loaderMessageIndex];
-        loaderCaption.classList.remove('is-changing');
-      }, 180);
-    }, 640) : null;
-
-    const dismissLoader = () => {
-      const remaining = Math.max(0, 1850 - (performance.now() - loaderStartedAt));
-      window.setTimeout(() => {
-        if (messageTimer) window.clearInterval(messageTimer);
-        loader.classList.add('is-leaving');
-        document.body.classList.remove('is-loading');
-        window.setTimeout(() => loader.remove(), 700);
-      }, remaining);
-    };
-
-    if (document.readyState === 'loading') {
-      document.addEventListener('DOMContentLoaded', dismissLoader, { once: true });
+    if (document.documentElement.classList.contains('intro-seen')) {
+      document.body.classList.remove('is-loading');
+      loader.remove();
     } else {
-      dismissLoader();
+      const loaderCaption = loader.querySelector('.loader-caption');
+      const loaderMessages = [
+        'La prossima avventura comincia qui.',
+        'Rigorosamente 4×4. Sempre.',
+        'Ogni strada ha la sua storia.'
+      ];
+      let loaderMessageIndex = 0;
+      const messageTimer = loaderCaption && !reduceMotion ? window.setInterval(() => {
+        loaderCaption.classList.add('is-changing');
+        window.setTimeout(() => {
+          loaderMessageIndex = (loaderMessageIndex + 1) % loaderMessages.length;
+          loaderCaption.textContent = loaderMessages[loaderMessageIndex];
+          loaderCaption.classList.remove('is-changing');
+        }, 180);
+      }, 640) : null;
+
+      const dismissLoader = () => {
+        const remaining = Math.max(0, 1850 - (performance.now() - loaderStartedAt));
+        window.setTimeout(() => {
+          if (messageTimer) window.clearInterval(messageTimer);
+          loader.classList.add('is-leaving');
+          document.body.classList.remove('is-loading');
+          window.setTimeout(() => loader.remove(), 700);
+        }, remaining);
+      };
+
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', dismissLoader, { once: true });
+      } else {
+        dismissLoader();
+      }
     }
   }
 
